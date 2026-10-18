@@ -51,6 +51,34 @@
                 </tr>
             </tbody>
         </table>
+
+        <h2>Dodavanje komponente</h2>
+
+<form>
+    <p>
+        <label for="naziv">Naziv komponente:</label>
+        <input type="text" id="naziv" name="naziv" required>
+    </p>
+
+    <p>
+        <label for="vrsta">Vrsta komponente:</label>
+        <select id="vrsta" name="vrsta" required>
+            <option value="">Odaberi vrstu</option>
+            <option value="otpornik">Otpornik</option>
+            <option value="kondenzator">Kondenzator</option>
+            <option value="led">LED dioda</option>
+        </select>
+    </p>
+
+    <p>
+        <label for="kolicina">Količina:</label>
+        <input type="number" id="kolicina" name="kolicina"
+               min="1" max="1000" required>
+    </p>
+
+    <button type="submit">Dodaj komponentu</button>
+    
+</form>
     </main>
 
     <footer>
