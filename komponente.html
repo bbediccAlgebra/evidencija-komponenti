@@ -3,86 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Komponente</title>
+    <title>Komponente | Evidento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Elektroničke komponente</h1>
+<a class="preskoci-navigaciju" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+    <header id="zaglavlje">
+    <a id="poveznica-logo" href="index.html">
+        <img id="logo" src="media/evidento-logo.png" alt="Evidento početna" width="2172" height="724">
+    </a>
 
-        <nav>
-            <a href="index.html">Početna</a>
-            <a href="komponente.html">Komponente</a>
-            <a href="potrosnja.html">Potrošnja</a>
-        </nav>
-    </header>
+    <h1 id="glavni-naslov">Komponente</h1>
 
-    <main>
-        <h2>Popis komponenti</h2>
-        <p>U tablici su prikazane komponente i njihove dostupne količine.</p>
+    <nav id="navigacija" aria-label="Glavna navigacija">
+        <a href="index.html">Početna</a>
+        <a href="potrosnja.html">Potrošnja</a>
+        <a href="vodic.html">Vodič</a>
+    </nav>
+</header>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Naziv</th>
-                    <th>Vrsta</th>
-                    <th>Količina</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Otpornik 220 Ω</td>
-                    <td>Otpornik</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>Crvena LED dioda</td>
-                    <td>LED dioda</td>
-                    <td>5</td>
-                </tr>
-                <tr>
-                    <td>Kondenzator 100 µF</td>
-                    <td>Kondenzator</td>
-                    <td>8</td>
-                </tr>
-                <tr>
-                    <td>Plava LED dioda</td>
-                    <td>LED dioda</td>
-                    <td>222</td>
-                </tr>
-            </tbody>
-        </table>
+    <main id="glavni-sadrzaj" tabindex="-1">
+        <section id="popis-komponenti">
+            <h2>Popis komponenti</h2>
+            <p>
+                U tablici su prikazane komponente i njihove dostupne količine.
+            </p>
 
-        <h2>Dodavanje komponente</h2>
+            <p>
+                <a href="#dodavanje-komponente">
+                    Idi na formu za dodavanje
+                </a>
+            </p>
 
-<form>
-    <p>
-        <label for="naziv">Naziv komponente:</label>
-        <input type="text" id="naziv" name="naziv" required>
-    </p>
+            <div class="omotac-tablice" role="region" aria-label="Tablica dostupnih komponenti" tabindex="0">
+            <table id="tablica-komponenti">
+                <caption>Dostupne komponente i broj komada</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Naziv</th>
+                        <th scope="col">Vrsta</th>
+                        <th scope="col">Količina</th>
+                    </tr>
+                </thead>
+                <tbody id="podaci-komponenti">
+                    <tr>
+                        <td>Otpornik 220 Ω</td>
+                        <td><span class="kategorija kategorija-otpornik">Otpornik</span></td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Crvena LED dioda</td>
+                        <td><span class="kategorija kategorija-led">LED dioda</span></td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Kondenzator 100 µF</td>
+                        <td><span class="kategorija kategorija-kondenzator">Kondenzator</span></td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Plava LED dioda</td>
+                        <td><span class="kategorija kategorija-led">LED dioda</span></td>
+                        <td>222</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
 
-    <p>
-        <label for="vrsta">Vrsta komponente:</label>
-        <select id="vrsta" name="vrsta" required>
-            <option value="">Odaberi vrstu</option>
-            <option value="otpornik">Otpornik</option>
-            <option value="kondenzator">Kondenzator</option>
-            <option value="led">LED dioda</option>
-        </select>
-    </p>
+        <section id="dodavanje-komponente">
+            <h2>Dodavanje komponente</h2>
 
-    <p>
-        <label for="kolicina">Količina:</label>
-        <input type="number" id="kolicina" name="kolicina"
-               min="1" max="1000" required>
-    </p>
+            <p id="napomena-forme">
+                Forma zasad provjerava unos.
+                Spremanje u tablicu dodat ćemo kasnije.
+            </p>
 
-    <button type="submit">Dodaj komponentu</button>
-    
-</form>
+            <form id="forma-komponente" class="forma-unosa" method="get" aria-describedby="napomena-forme">
+                <p>
+                    <label for="naziv">Naziv komponente:</label>
+                    <input
+                        type="text"
+                        id="naziv"
+                        name="naziv"
+                        maxlength="100"
+                        required
+                    >
+                </p>
+
+                <p>
+                    <label for="vrsta">Vrsta komponente:</label>
+                    <select id="vrsta" name="vrsta" required>
+                        <option value="">Odaberi vrstu</option>
+                        <option value="otpornik">Otpornik</option>
+                        <option value="kondenzator">Kondenzator</option>
+                        <option value="led">LED dioda</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="kolicina">Količina:</label>
+                    <input
+                        type="number"
+                        id="kolicina"
+                        name="kolicina"
+                        min="1"
+                        max="1000"
+                        step="1"
+                        required
+                    >
+                </p>
+
+                <button id="gumb-dodaj" class="gumb-glavni" type="submit">
+                    Dodaj komponentu
+                </button>
+            </form>
+        </section>
     </main>
 
-    <footer>
-        <p>Projekt: Evidencija elektroničkih komponenti</p>
-    </footer>
+<footer id="podnozje">
+    <p>Made with love by Borna Bedić for AI alati u razvoju softvera</p>
+</footer>
 </body>
 </html>

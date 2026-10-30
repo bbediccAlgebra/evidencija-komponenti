@@ -3,57 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potrošnja komponenti</title>
+    <title>Potrošnja | Evidento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Potrošnja komponenti</h1>
+<a class="preskoci-navigaciju" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+    <header id="zaglavlje">
+    <a id="poveznica-logo" href="index.html">
+        <img id="logo" src="media/evidento-logo.png" alt="Evidento početna" width="2172" height="724">
+    </a>
 
-        <nav>
-            <a href="index.html">Početna</a>
-            <a href="komponente.html">Komponente</a>
-            <a href="potrosnja.html">Potrošnja</a>
-        </nav>
-    </header>
+    <h1 id="glavni-naslov">Potrošnja</h1>
 
-    <main>
-        <h2>Popis potrošenih komponenti</h2>
-        <p>U tablici su prikazane komponente potrošene tijekom rada na projektima.</p>
+    <nav id="navigacija" aria-label="Glavna navigacija">
+        <a href="index.html">Početna</a>
+        <a href="komponente.html">Komponente</a>
+        <a href="vodic.html">Vodič</a>
+    </nav>
+</header>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Komponenta</th>
-                    <th>Količina</th>
-                    <th>Datum potrošnje</th>
-                    <th>Namjena</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Otpornik 220 Ω</td>
-                    <td>2</td>
-                    <td>18. 10. 2026.</td>
-                    <td>Spajanje LED diode</td>
-                </tr>
-                <tr>
-                    <td>Crvena LED dioda</td>
-                    <td>1</td>
-                    <td>18. 10. 2026.</td>
-                    <td>Signalna lampica</td>
-                </tr>
-                <tr>
-                    <td>Kondenzator 100 µF</td>
-                    <td>1</td>
-                    <td>18. 10. 2026.</td>
-                    <td>Izrada napajanja</td>
-                </tr>
-            </tbody>
-        </table>
+    <main id="glavni-sadrzaj" tabindex="-1">
+        <section id="popis-potrosnje">
+            <h2>Popis potrošenih komponenti</h2>
+            <p>
+                U tablici su prikazani primjeri potrošnje komponenti
+                tijekom rada na projektima.
+            </p>
+
+            <p><a href="#biljezenje-potrosnje">Idi na formu za potrošnju</a></p>
+
+            <div class="omotac-tablice" role="region" aria-label="Tablica potrošnje komponenti" tabindex="0">
+            <table id="tablica-potrosnje">
+                <caption>Primjeri potrošnje komponenti po datumu i namjeni</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Komponenta</th>
+                        <th scope="col">Količina</th>
+                        <th scope="col">Datum potrošnje</th>
+                        <th scope="col">Namjena</th>
+                    </tr>
+                </thead>
+                <tbody id="podaci-potrosnje">
+                    <tr>
+                        <td>Otpornik 220 Ω</td>
+                        <td>2</td>
+                        <td>18. 10. 2026.</td>
+                        <td>Spajanje LED diode</td>
+                    </tr>
+                    <tr>
+                        <td>Crvena LED dioda</td>
+                        <td>1</td>
+                        <td>18. 10. 2026.</td>
+                        <td>Signalna lampica</td>
+                    </tr>
+                    <tr>
+                        <td>Kondenzator 100 µF</td>
+                        <td>1</td>
+                        <td>18. 10. 2026.</td>
+                        <td>Izrada napajanja</td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </section>
+        <section id="biljezenje-potrosnje">
+            <h2>Zabilježi potrošnju</h2>
+            <p id="napomena-potrosnje">
+                Unesi podatke o potrošenim komponentama. Forma zasad provjerava
+                unos, a spremanje u tablicu dodat ćemo uz JavaScript.
+            </p>
+
+            <form id="forma-potrosnje" class="forma-unosa" method="get"
+                  aria-describedby="napomena-potrosnje">
+                <input type="hidden" name="vrsta-unosa" value="potrosnja">
+
+                <p>
+                    <label for="potrosena-komponenta">Komponenta:</label>
+                    <select id="potrosena-komponenta" name="komponenta" required>
+                        <option value="">Odaberi komponentu</option>
+                        <option value="otpornik-220">Otpornik 220 Ω</option>
+                        <option value="led-crvena">Crvena LED dioda</option>
+                        <option value="kondenzator-100">Kondenzator 100 µF</option>
+                        <option value="led-plava">Plava LED dioda</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="potrosena-kolicina">Potrošena količina:</label>
+                    <input type="number" id="potrosena-kolicina" name="kolicina"
+                           min="1" max="1000" step="1" required>
+                </p>
+
+                <p>
+                    <label for="datum-potrosnje">Datum potrošnje:</label>
+                    <input type="date" id="datum-potrosnje" name="datum" required>
+                </p>
+
+                <p>
+                    <label for="namjena">Namjena:</label>
+                    <textarea id="namjena" name="namjena" rows="3"
+                              maxlength="300" placeholder="Npr. izrada signalne lampice"
+                              required></textarea>
+                </p>
+
+                <button id="gumb-potrosnja" class="gumb-glavni" type="submit">
+                    Zabilježi potrošnju
+                </button>
+            </form>
+        </section>
     </main>
 
-    <footer>
-        <p>Projekt: Evidencija elektroničkih komponenti</p>
-    </footer>
+<footer id="podnozje">
+    <p>Made with love by Borna Bedić for AI alati u razvoju softvera</p>
+</footer>
 </body>
 </html>

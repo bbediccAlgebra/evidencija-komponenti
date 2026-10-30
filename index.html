@@ -3,10 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evidencija komponenti</title>
+    <title>Početna | Evidento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>Evidencija elektroničkih komponenti</h1>
-    <p>Ova aplikacija služi za pregled komponenti i praćenje njihove potrošnje.</p>
+<body id="pocetna">
+<a class="preskoci-navigaciju" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+    <header id="zaglavlje">
+    <a id="poveznica-logo" href="index.html">
+        <img id="logo" src="media/evidento-logo.png" alt="Evidento početna" width="2172" height="724">
+    </a>
+
+    <h1 id="glavni-naslov">Početna</h1>
+
+    <nav id="navigacija" aria-label="Glavna navigacija">
+        <a href="komponente.html">Komponente</a>
+        <a href="potrosnja.html">Potrošnja</a>
+        <a href="vodic.html">Vodič</a>
+    </nav>
+</header>
+
+    <main id="glavni-sadrzaj" tabindex="-1">
+        <section id="opis-aplikacije">
+            <h2>O aplikaciji</h2>
+            <p>
+                Aplikacija služi za pregled elektroničkih komponenti
+                i praćenje njihove potrošnje.
+            </p>
+
+            <h2>Mogućnosti aplikacije</h2>
+            <ul>
+                <li>Pregled dostupnih komponenti.</li>
+                <li>Unos podataka o novim komponentama.</li>
+                <li>Pregled potrošenih komponenti.</li>
+            </ul>
+
+            <p>
+                <a href="komponente.html">Pogledaj komponente</a>
+            </p>
+        </section>
+    </main>
+
+<footer id="podnozje">
+    <p>Made with love by Borna Bedić for AI alati u razvoju softvera</p>
+</footer>
 </body>
 </html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vodič | Evidento</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="preskoci-navigaciju" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+    <header id="zaglavlje">
+        <a id="poveznica-logo" href="index.html">
+            <img
+                id="logo"
+                src="media/evidento-logo.png"
+                alt="Evidento početna" width="2172" height="724"
+            >
+        </a>
+
+        <h1 id="glavni-naslov">Vodič</h1>
+
+        <nav id="navigacija" aria-label="Glavna navigacija">
+            <a href="index.html">Početna</a>
+            <a href="komponente.html">Komponente</a>
+            <a href="potrosnja.html">Potrošnja</a>
+        </nav>
+    </header>
+
+    <main id="glavni-sadrzaj" tabindex="-1">
+        <section id="uvod-vodica">
+            <h2>Upoznaj elektroničke komponente</h2>
+            <p>
+                Kratak vodič kroz komponente koje pratimo
+                u aplikaciji Evidento.
+            </p>
+        </section>
+
+        <div id="kartice-komponenti">
+            <article class="kartica-komponente" id="vodic-otpornik">
+                <span class="oznaka-komponente">R</span>
+
+                <h2>Otpornik</h2>
+
+                <p>
+                    Otpornik ograničava električnu struju.
+                    Njegov otpor izražava se u omima, oznakom Ω.
+                </p>
+
+                <h3>Primjer primjene</h3>
+
+                <p>
+                    Spaja se u seriju s LED diodom kako bi
+                    ograničio struju i zaštitio je od oštećenja.
+                </p>
+
+                <a href="komponente.html">Pogledaj dostupne komponente</a>
+            </article>
+
+            <article class="kartica-komponente" id="vodic-kondenzator">
+                <span class="oznaka-komponente">C</span>
+
+                <h2>Kondenzator</h2>
+
+                <p>
+                    Kondenzator pohranjuje električni naboj.
+                    Njegov kapacitet izražava se u faradima,
+                    a često koristimo mikrofarade, oznakom µF.
+                </p>
+
+                <h3>Primjer primjene</h3>
+
+                <p>
+                    Koristi se u napajanjima za smanjivanje
+                    promjena napona.
+                </p>
+
+                <a href="komponente.html">Pogledaj dostupne komponente</a>
+            </article>
+
+            <article class="kartica-komponente" id="vodic-led">
+                <span class="oznaka-komponente">LED</span>
+
+                <h2>LED dioda</h2>
+
+                <p>
+                    LED dioda emitira svjetlost kada kroz nju
+                    prolazi struja u propusnom smjeru.
+                    Ima anodu i katodu te se mora pravilno spojiti.
+                </p>
+
+                <h3>Primjer primjene</h3>
+
+                <p>
+                    Koristi se kao signalna lampica koja
+                    pokazuje je li uređaj uključen.
+                </p>
+
+                <a href="komponente.html">Pogledaj dostupne komponente</a>
+            </article>
+        </div>
+
+        <section id="cesta-pitanja">
+            <h2>Česta pitanja</h2>
+            <p>Kratki odgovori o komponentama i korištenju aplikacije.</p>
+
+            <details>
+                <summary>Što znače oznake Ω i µF?</summary>
+                <p>Ω označava om, mjernu jedinicu električnog otpora.
+                   µF označava mikrofarad, milijunti dio farada, jedinice kapaciteta.</p>
+            </details>
+
+            <details>
+                <summary>Zašto uz LED diodu koristimo otpornik?</summary>
+                <p>Otpornik ograničava struju kroz LED diodu i tako je štiti
+                   od oštećenja. Vrijednost otpornika ovisi o naponu napajanja
+                   i karakteristikama diode.</p>
+            </details>
+
+            <details>
+                <summary>Koja je razlika između komponenti i potrošnje?</summary>
+                <p>Na stranici Komponente prikazujemo dostupne dijelove.
+                   Na stranici Potrošnja pratimo koje smo dijelove iskoristili,
+                   koliko komada i za koju namjenu.</p>
+            </details>
+
+            <details>
+                <summary>Zašto se unos iz forme još ne prikazuje u tablici?</summary>
+                <p>Trenutno radimo HTML i CSS. Forme provjeravaju obavezna polja
+                   i dopušteni raspon količine. Spremanje podataka i ažuriranje
+                   tablica dodat ćemo kada počnemo raditi JavaScript.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer id="podnozje">
+        <p>Made with love by Borna Bedić for AI alati u razvoju softvera</p>
+    </footer>
+</body>
+</html>
