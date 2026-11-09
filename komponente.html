@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="stranica-evidencije">
 <a class="preskoci-navigaciju" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
     <header id="zaglavlje">
     <a id="poveznica-logo" href="index.html">
@@ -24,16 +24,20 @@
 </header>
 
     <main id="glavni-sadrzaj" tabindex="-1">
-        <section id="popis-komponenti">
-            <h2>Popis komponenti</h2>
+        <div class="uvod-stranice">
+            <span class="mala-oznaka">EVIDENTO · KOMPONENTE</span>
+            <h2>Sve komponente na jednom mjestu</h2>
+            <p>Pregled dostupnih dijelova tvoje radionice. Novi unos pripremi ispod popisa.</p>
+        </div>
+
+        <div class="evidencija">
+        <section id="popis-komponenti" class="pregled-panel">
+            <div class="naslov-panela">
+                <h3>Dostupne komponente</h3>
+                <span class="oznaka-pregleda">Ogledni podaci</span>
+            </div>
             <p>
                 U tablici su prikazane komponente i njihove dostupne količine.
-            </p>
-
-            <p>
-                <a href="#dodavanje-komponente">
-                    Idi na formu za dodavanje
-                </a>
             </p>
 
             <div class="omotac-tablice" role="region" aria-label="Tablica dostupnih komponenti" tabindex="0">
@@ -47,17 +51,17 @@
                     </tr>
                 </thead>
                 <tbody id="podaci-komponenti">
-                    <tr>
+                    <tr id="komponenta-otpornik">
                         <td>Otpornik 220 Ω</td>
                         <td><span class="kategorija kategorija-otpornik">Otpornik</span></td>
                         <td>10</td>
                     </tr>
-                    <tr>
+                    <tr id="komponenta-led">
                         <td>Crvena LED dioda</td>
                         <td><span class="kategorija kategorija-led">LED dioda</span></td>
                         <td>5</td>
                     </tr>
-                    <tr>
+                    <tr id="komponenta-kondenzator">
                         <td>Kondenzator 100 µF</td>
                         <td><span class="kategorija kategorija-kondenzator">Kondenzator</span></td>
                         <td>8</td>
@@ -72,21 +76,26 @@
             </div>
         </section>
 
-        <section id="dodavanje-komponente">
-            <h2>Dodavanje komponente</h2>
+        <section id="dodavanje-komponente" class="unos-panel">
+            <div class="opis-unosa">
+            <span class="mala-oznaka">NOVI UNOS</span>
+            <h3>Dodaj komponentu</h3>
+            <p>Upiši naziv, odaberi kategoriju i navedi broj komada.</p>
 
             <p id="napomena-forme">
-                Forma zasad provjerava unos.
-                Spremanje u tablicu dodat ćemo kasnije.
+                Probni obrazac: provjera unosa radi, spremanje podataka još nije omogućeno.
             </p>
 
-            <form id="forma-komponente" class="forma-unosa" method="get" aria-describedby="napomena-forme">
-                <p>
+            </div>
+
+            <form id="forma-komponente" class="forma-unosa forma-evidencije" method="get" aria-describedby="napomena-forme">
+                <p class="polje-puna-sirina">
                     <label for="naziv">Naziv komponente:</label>
                     <input
                         type="text"
                         id="naziv"
                         name="naziv"
+                        placeholder="Npr. otpornik 220 Ω"
                         maxlength="100"
                         required
                     >
@@ -106,20 +115,29 @@
                     <label for="kolicina">Količina:</label>
                     <input
                         type="number"
-                        id="kolicina"
+                        id="kolicina" aria-describedby="pomoc-kolicina"
                         name="kolicina"
+                        placeholder="Broj komada"
                         min="1"
                         max="1000"
                         step="1"
                         required
                     >
+                    <small id="pomoc-kolicina" class="pomoc-polja">Cijeli broj od 1 do 1000 komada.</small>
                 </p>
 
+                <div class="radnje-forme">
+                <span class="uputa-forme">Sva polja su obavezna.</span>
+                <div class="gumbi-forme">
+                <button class="gumb-ocisti" type="reset">Očisti unos</button>
                 <button id="gumb-dodaj" class="gumb-glavni" type="submit">
                     Dodaj komponentu
                 </button>
+                </div>
+                </div>
             </form>
         </section>
+        </div>
     </main>
 
 <footer id="podnozje">

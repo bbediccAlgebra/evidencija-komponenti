@@ -30,39 +30,37 @@
     </header>
 
     <main id="glavni-sadrzaj" tabindex="-1">
-        <section id="uvod-vodica">
-            <h2>Upoznaj elektroničke komponente</h2>
-            <p>
-                Kratak vodič kroz komponente koje pratimo
-                u aplikaciji Evidento.
-            </p>
-        </section>
+        <div id="uvod-vodica" class="uvod-stranice">
+            <span class="mala-oznaka">EVIDENTO · VODIČ</span>
+            <h2>Upoznaj dijelove svoje radionice</h2>
+            <p>Prvo upoznaj osnovne komponente, a ispod pronađi odgovore na česta pitanja.</p>
+        </div>
 
         <div id="kartice-komponenti">
             <article class="kartica-komponente" id="vodic-otpornik">
                 <span class="oznaka-komponente">R</span>
 
-                <h2>Otpornik</h2>
+                <h3 class="naslov-komponente">Otpornik</h3>
 
                 <p>
                     Otpornik ograničava električnu struju.
                     Njegov otpor izražava se u omima, oznakom Ω.
                 </p>
 
-                <h3>Primjer primjene</h3>
+                <h4>Primjer primjene</h4>
 
                 <p>
                     Spaja se u seriju s LED diodom kako bi
                     ograničio struju i zaštitio je od oštećenja.
                 </p>
 
-                <a href="komponente.html">Pogledaj dostupne komponente</a>
+                <a href="komponente.html#komponenta-otpornik">Pronađi u tablici</a>
             </article>
 
             <article class="kartica-komponente" id="vodic-kondenzator">
                 <span class="oznaka-komponente">C</span>
 
-                <h2>Kondenzator</h2>
+                <h3 class="naslov-komponente">Kondenzator</h3>
 
                 <p>
                     Kondenzator pohranjuje električni naboj.
@@ -70,20 +68,20 @@
                     a često koristimo mikrofarade, oznakom µF.
                 </p>
 
-                <h3>Primjer primjene</h3>
+                <h4>Primjer primjene</h4>
 
                 <p>
                     Koristi se u napajanjima za smanjivanje
                     promjena napona.
                 </p>
 
-                <a href="komponente.html">Pogledaj dostupne komponente</a>
+                <a href="komponente.html#komponenta-kondenzator">Pronađi u tablici</a>
             </article>
 
             <article class="kartica-komponente" id="vodic-led">
                 <span class="oznaka-komponente">LED</span>
 
-                <h2>LED dioda</h2>
+                <h3 class="naslov-komponente">LED dioda</h3>
 
                 <p>
                     LED dioda emitira svjetlost kada kroz nju
@@ -91,19 +89,19 @@
                     Ima anodu i katodu te se mora pravilno spojiti.
                 </p>
 
-                <h3>Primjer primjene</h3>
+                <h4>Primjer primjene</h4>
 
                 <p>
                     Koristi se kao signalna lampica koja
                     pokazuje je li uređaj uključen.
                 </p>
 
-                <a href="komponente.html">Pogledaj dostupne komponente</a>
+                <a href="komponente.html#komponenta-led">Pronađi u tablici</a>
             </article>
         </div>
 
-        <section id="cesta-pitanja">
-            <h2>Česta pitanja</h2>
+        <section id="cesta-pitanja" aria-labelledby="naslov-pitanja">
+            <h2 id="naslov-pitanja">Još nešto nije jasno?</h2>
             <p>Kratki odgovori o komponentama i korištenju aplikacije.</p>
 
             <details>

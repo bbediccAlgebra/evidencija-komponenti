@@ -14,7 +14,8 @@ Evidento je web aplikacija za evidenciju elektroničkih komponenti i praćenje n
 - HTML za strukturu stranica, tablice i forme.
 - CSS za izgled, boje, razmake i prilagodbu različitim veličinama ekrana.
 - CSS Grid za raspored zaglavlja i kartica.
-- Flexbox za navigaciju i raspored elemenata forme.
+- Flexbox za navigaciju, kartice početne stranice i raspored elemenata forme.
+- CSS tranzicije za postupnu promjenu boja, položaja i sjena.
 - Git i GitHub za praćenje verzija projekta.
 
 ## Pokretanje
@@ -28,6 +29,14 @@ Za učitavanje fonta Inter potrebna je internetska veza. Bez nje koristi se zamj
 Izrađene su četiri povezane stranice s prilagodbom za manje ekrane. Forme provjeravaju obavezna polja i dopušteni raspon količine.
 
 Podaci u tablicama zasad su upisani ručno. Spremanje unosa, promjena količina i ostale dinamičke mogućnosti bit će dodani tijekom rada s JavaScriptom.
+
+## Dorade rasporeda i tranzicija
+
+- Početna stranica ima uvod i tri kartice s poveznicama.
+- Na stranicama Komponente i Potrošnja tablica je iznad obrasca za unos.
+- Polja obrasca koriste Flexbox i prelaze u jedan stupac na mobitelu.
+- Obje forme imaju HTML gumb za čišćenje unosa.
+- Poveznice iz vodiča otvaraju odgovarajući redak tablice, istaknut CSS selektorom `:target`.
 
 ## Autor
 

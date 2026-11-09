@@ -24,23 +24,46 @@
 </header>
 
     <main id="glavni-sadrzaj" tabindex="-1">
-        <section id="opis-aplikacije">
-            <h2>O aplikaciji</h2>
-            <p>
-                Aplikacija služi za pregled elektroničkih komponenti
-                i praćenje njihove potrošnje.
+        <section id="uvod-pocetne" aria-labelledby="naslov-uvoda">
+            <span class="mala-oznaka">EVIDENTO · ELEKTRONIČKE KOMPONENTE</span>
+            <h2 id="naslov-uvoda">Mali dijelovi.<br>Bolji pregled.</h2>
+            <p class="uvodni-tekst">
+                Pregledaj komponente svoje radionice, pronađi podatke o potrošnji
+                i nauči čemu služi svaki dio. Sve na jednom mjestu.
             </p>
 
-            <h2>Mogućnosti aplikacije</h2>
-            <ul>
-                <li>Pregled dostupnih komponenti.</li>
-                <li>Unos podataka o novim komponentama.</li>
-                <li>Pregled potrošenih komponenti.</li>
-            </ul>
+            <p class="napomena-pocetne">Studentski projekt u razvoju. Trenutno su prikazani ogledni podaci.</p>
+        </section>
 
-            <p>
-                <a href="komponente.html">Pogledaj komponente</a>
-            </p>
+        <section id="koraci" aria-labelledby="naslov-koraka">
+            <h2 id="naslov-koraka">Odaberi što želiš otvoriti</h2>
+            <p>Pregled komponenti, evidencija potrošnje ili pomoć pri učenju — odaberi gdje želiš nastaviti.</p>
+
+            <div class="precaci">
+                <article class="kartica-korak">
+                    <span class="broj-koraka" aria-hidden="true">01</span>
+                    <h3>Pronađi svoj dio</h3>
+                    <p>U tablici komponenti pogledaj naziv, kategoriju i dostupnu količinu.
+                       Ispod tablice nalazi se forma za unos nove komponente.</p>
+                    <a class="pocetna-gumb" href="komponente.html">Otvori komponente <span aria-hidden="true">→</span></a>
+                </article>
+
+                <article class="kartica-korak">
+                    <span class="broj-koraka" aria-hidden="true">02</span>
+                    <h3>Pregledaj potrošnju</h3>
+                    <p>Provjeri primjere utrošenih dijelova, datume i njihovu namjenu.
+                       U formi možeš isprobati unos podataka o potrošnji.</p>
+                    <a class="pocetna-gumb" href="potrosnja.html">Otvori potrošnju <span aria-hidden="true">→</span></a>
+                </article>
+
+                <article class="kartica-korak">
+                    <span class="broj-koraka" aria-hidden="true">03</span>
+                    <h3>Upoznaj komponente</h3>
+                    <p>Nisi siguran čemu neki dio služi? Vodič objašnjava otpornike,
+                       kondenzatore i LED diode te odgovara na česta pitanja.</p>
+                    <a class="pocetna-gumb" href="vodic.html">Istraži vodič <span aria-hidden="true">→</span></a>
+                </article>
+            </div>
         </section>
     </main>
 
