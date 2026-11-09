@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oznake otpornika | Evidento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="preskoci-navigaciju" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+    <header id="zaglavlje">
+        <a id="poveznica-logo" href="index.html">
+            <img id="logo" src="media/evidento-logo.png" alt="Evidento početna" width="2172" height="724">
+        </a>
+        <h1 id="glavni-naslov">Oznake otpornika</h1>
+        <nav id="navigacija" aria-label="Glavna navigacija">
+            <a href="index.html">Početna</a>
+            <a href="komponente.html">Komponente</a>
+            <a href="potrosnja.html">Potrošnja</a>
+            <a href="vodic.html">Vodič</a>
+        </nav>
+    </header>
+
+    <main id="glavni-sadrzaj" tabindex="-1">
+        <div class="uvod-stranice">
+            <span class="mala-oznaka">EVIDENTO · ISTRAŽI KOMPONENTU</span>
+            <h2>Male boje. Važna razlika.</h2>
+            <p>Odaberi primjer, promijeni pogled i otkrij kako četiri prstena otkrivaju vrijednost otpornika.</p>
+        </div>
+
+        <form id="istrazivac-otpornika" aria-label="Istraživač oznaka otpornika">
+            <section class="prikaz-otpornika" aria-labelledby="naslov-prikaza">
+                <div class="naslov-panela">
+                    <h2 id="naslov-prikaza">Radni stol</h2>
+                    <span class="oznaka-pregleda">4 prstena · CSS prikaz</span>
+                </div>
+
+                <div class="scena-otpornika" aria-hidden="true">
+                    <span class="natpis-scene">EVIDENTO / LAB</span>
+                    <div class="model-otpornika">
+                        <div class="zica-otpornika zica-lijevo"></div>
+                        <div class="tijelo-otpornika">
+                            <span class="prsten-otpornika prvi-prsten"></span>
+                            <span class="prsten-otpornika drugi-prsten"></span>
+                            <span class="prsten-otpornika treci-prsten"></span>
+                            <span class="prsten-otpornika cetvrti-prsten"></span>
+                        </div>
+                        <div class="zica-otpornika zica-desno"></div>
+                    </div>
+                    <span class="opis-scene">Prva dva prstena → množitelj → tolerancija</span>
+                </div>
+
+                <div class="rezultati-otpornika">
+                        <div class="rezultat-otpornika rezultat-220">
+                            <span class="naziv-rezultata">Vrijednost otpornika</span>
+                            <h3>220 Ω <small>±5%</small></h3>
+                            <p class="boje-rezultata">Crvena, crvena, smeđa, zlatna</p>
+                            <p class="racun-rezultata">22 × 10 = 220 Ω</p>
+                            <p class="raspon-rezultata">Raspon uz toleranciju: 209–231 Ω.</p>
+                        </div>
+                        <div class="rezultat-otpornika rezultat-330">
+                            <span class="naziv-rezultata">Vrijednost otpornika</span>
+                            <h3>330 Ω <small>±5%</small></h3>
+                            <p class="boje-rezultata">Narančasta, narančasta, smeđa, zlatna</p>
+                            <p class="racun-rezultata">33 × 10 = 330 Ω</p>
+                            <p class="raspon-rezultata">Raspon uz toleranciju: 313,5–346,5 Ω.</p>
+                        </div>
+                        <div class="rezultat-otpornika rezultat-1000">
+                            <span class="naziv-rezultata">Vrijednost otpornika</span>
+                            <h3>1 kΩ <small>±5%</small></h3>
+                            <p class="boje-rezultata">Smeđa, crna, crvena, zlatna</p>
+                            <p class="racun-rezultata">10 × 100 = 1000 Ω</p>
+                            <p class="raspon-rezultata">Raspon uz toleranciju: 950–1050 Ω.</p>
+                        </div>
+                        <div class="rezultat-otpornika rezultat-4700">
+                            <span class="naziv-rezultata">Vrijednost otpornika</span>
+                            <h3>4,7 kΩ <small>±5%</small></h3>
+                            <p class="boje-rezultata">Žuta, ljubičasta, crvena, zlatna</p>
+                            <p class="racun-rezultata">47 × 100 = 4700 Ω</p>
+                            <p class="raspon-rezultata">Raspon uz toleranciju: 4465–4935 Ω.</p>
+                        </div>
+                        <div class="rezultat-otpornika rezultat-10000">
+                            <span class="naziv-rezultata">Vrijednost otpornika</span>
+                            <h3>10 kΩ <small>±5%</small></h3>
+                            <p class="boje-rezultata">Smeđa, crna, narančasta, zlatna</p>
+                            <p class="racun-rezultata">10 × 1000 = 10 000 Ω</p>
+                            <p class="raspon-rezultata">Raspon uz toleranciju: 9500–10 500 Ω.</p>
+                        </div>
+                </div>
+            </section>
+
+            <section class="kontrole-otpornika" aria-labelledby="naslov-kontrola">
+                <span class="mala-oznaka">ISPROBAJ SAM</span>
+                <h2 id="naslov-kontrola">Istraži oznake</h2>
+                <p>Odaberi jedan od pet primjera. Prikaz i objašnjenje mijenjaju se zajedno.</p>
+
+                <fieldset class="grupa-otpornika">
+                    <legend>1. Odaberi otpornik</legend>
+                    <div class="opcije-otpornika">
+                        <label class="opcija-otpornika">
+                            <input type="radio" id="primjer-220" name="primjer" value="220" checked>
+                            <span>220 Ω</span>
+                        </label>
+                        <label class="opcija-otpornika">
+                            <input type="radio" id="primjer-330" name="primjer" value="330">
+                            <span>330 Ω</span>
+                        </label>
+                        <label class="opcija-otpornika">
+                            <input type="radio" id="primjer-1000" name="primjer" value="1000">
+                            <span>1 kΩ</span>
+                        </label>
+                        <label class="opcija-otpornika">
+                            <input type="radio" id="primjer-4700" name="primjer" value="4700">
+                            <span>4,7 kΩ</span>
+                        </label>
+                        <label class="opcija-otpornika">
+                            <input type="radio" id="primjer-10000" name="primjer" value="10000">
+                            <span>10 kΩ</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="grupa-otpornika">
+                    <legend>2. Promijeni pogled</legend>
+                    <div class="opcije-otpornika opcije-pogleda">
+                        <label class="opcija-otpornika">
+                            <input type="radio" id="pogled-ravno" name="pogled" value="ravno" checked>
+                            <span>Sprijeda</span>
+                        </label>
+                        <label class="opcija-otpornika">
+                            <input type="radio" id="pogled-koso" name="pogled" value="koso">
+                            <span>Ukoso</span>
+                        </label>
+                        <label class="opcija-otpornika">
+                            <input type="radio" id="pogled-odozgo" name="pogled" value="odozgo">
+                            <span>Odozgo</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <button class="gumb-ocisti" type="reset">Vrati početni prikaz</button>
+                <p class="napomena-istrazivaca">Trenutno istražuješ gotove primjere. Slobodan odabir boje svakog prstena i automatski izračun slijede uz JavaScript.</p>
+            </section>
+        </form>
+
+        <section id="citanje-prstenova">
+            <h2>Kako čitati četiri prstena?</h2>
+            <p>Čitaj od kraja na kojem su tri prstena bliže jedan drugome. Odvojeni zlatni prsten u ovim primjerima označava toleranciju.</p>
+            <div class="objasnjenja-prstenova">
+                <article><span>01</span><h3>Prva znamenka</h3><p>Prvi prsten daje prvu znamenku. Crvena znači 2.</p></article>
+                <article><span>02</span><h3>Druga znamenka</h3><p>Drugi prsten daje drugu znamenku. Još jedna crvena daje broj 22.</p></article>
+                <article><span>03</span><h3>Množitelj</h3><p>Treći prsten određuje s čime množimo broj. Smeđa znači ×10.</p></article>
+                <article><span>04</span><h3>Tolerancija</h3><p>Četvrti prsten označava dopušteno odstupanje. Zlatna znači ±5%.</p></article>
+            </div>
+        </section>
+
+        <section id="tablica-boja-otpornika">
+            <h2>Brzi podsjetnik za boje</h2>
+            <p>Znamenke i množitelji za čitanje otpornika s četiri prstena.</p>
+            <div class="omotac-tablice" role="region" aria-label="Vrijednosti boja prstenova" tabindex="0">
+                <table>
+                    <caption>Boje za znamenke i množitelj; zlatna i srebrna nisu znamenke</caption>
+                    <thead><tr><th scope="col">Boja</th><th scope="col">Znamenka</th><th scope="col">Množitelj</th></tr></thead>
+                    <tbody>
+                        <tr><td><span class="uzorak-boje boja-crna" aria-hidden="true"></span>Crna</td><td>0</td><td>×1</td></tr>
+                        <tr><td><span class="uzorak-boje boja-smeda" aria-hidden="true"></span>Smeđa</td><td>1</td><td>×10</td></tr>
+                        <tr><td><span class="uzorak-boje boja-crvena" aria-hidden="true"></span>Crvena</td><td>2</td><td>×100</td></tr>
+                        <tr><td><span class="uzorak-boje boja-narancasta" aria-hidden="true"></span>Narančasta</td><td>3</td><td>×1000</td></tr>
+                        <tr><td><span class="uzorak-boje boja-zuta" aria-hidden="true"></span>Žuta</td><td>4</td><td>×10 000</td></tr>
+                        <tr><td><span class="uzorak-boje boja-zelena" aria-hidden="true"></span>Zelena</td><td>5</td><td>×100 000</td></tr>
+                        <tr><td><span class="uzorak-boje boja-plava" aria-hidden="true"></span>Plava</td><td>6</td><td>×1 000 000</td></tr>
+                        <tr><td><span class="uzorak-boje boja-ljubicasta" aria-hidden="true"></span>Ljubičasta</td><td>7</td><td>×10 000 000</td></tr>
+                        <tr><td><span class="uzorak-boje boja-siva" aria-hidden="true"></span>Siva</td><td>8</td><td>×100 000 000</td></tr>
+                        <tr><td><span class="uzorak-boje boja-bijela" aria-hidden="true"></span>Bijela</td><td>9</td><td>×1 000 000 000</td></tr>
+                        <tr><td><span class="uzorak-boje boja-zlatna" aria-hidden="true"></span>Zlatna</td><td>—</td><td>×0,1</td></tr>
+                        <tr><td><span class="uzorak-boje boja-srebrna" aria-hidden="true"></span>Srebrna</td><td>—</td><td>×0,01</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="izvor-otpornika">Za toleranciju zlatna označava ±5%, a srebrna ±10%.
+                <a href="https://www.vishay.com/docs/49411/resistor_color_code_calculator.pdf" target="_blank" rel="noopener noreferrer">Vishay tablica oznaka (PDF, novi tab)</a>
+            </p>
+        </section>
+    </main>
+
+    <footer id="podnozje">
+        <p>Made with love by Borna Bedić for AI alati u razvoju softvera</p>
+    </footer>
+</body>
+</html>
