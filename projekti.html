@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Evidento — evidencija elektroničkih komponenti, projekti i edukativni alati.">
+    <title>Projekti | Evidento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="preskoci-navigaciju" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+    <header id="zaglavlje">
+        <div class="sadrzaj-zaglavlja">
+            <a id="poveznica-logo" href="index.html">
+                <img id="logo" src="media/evidento-logo.png" alt="Evidento početna" width="2172" height="724">
+            </a>
+            <nav id="navigacija" aria-label="Glavna navigacija">
+                <a href="index.html">Početna</a>
+                <details class="izbornik-zaliha">
+                    <summary>Zalihe <span aria-hidden="true">⌄</span></summary>
+                    <div class="padajuci-izbornik">
+                        <div class="opis-izbornika"><strong>Tvoja radionica</strong><p>Što imaš, što dodaješ i što trošiš.</p></div>
+                        <div class="poveznice-izbornika">
+                            <a href="zalihe.html"><strong>Trenutno stanje</strong><span>Dostupne komponente i količine</span></a>
+                            <a href="zalihe.html#povijest-promjena"><strong>Povijest promjena</strong><span>Dodavanje, potrošnja i namjena</span></a>
+                            <a href="zalihe.html#unos-promjene"><strong>Unos promjene</strong><span>Dodaj komade ili evidentiraj potrošnju</span></a>
+                            <a href="zalihe.html#nova-komponenta"><strong>Nova komponenta</strong><span>Dio koji još nemaš u evidenciji</span></a>
+                        </div>
+                    </div>
+                </details>
+                <a href="projekti.html" aria-current="page">Projekti</a>
+                <a href="alati.html">Alati</a>
+                <a href="vodic.html">Vodič</a>
+            </nav>
+        </div>
+    </header>
+    <main id="glavni-sadrzaj" tabindex="-1">
+        <div class="uvod-stranice">
+            <span class="mala-oznaka">EVIDENTO · PROJEKTI</span>
+            <h1>Svaki dio ima svoju namjenu.</h1>
+            <p>Planiraj izradu, zapiši potrebne komponente i poveži stvarnu potrošnju s projektom.</p>
+        </div>
+        <p class="obavijest-prototipa">Ogledni projekti. Planirana količina ne rezervira niti smanjuje zalihu; potrošnju bilježimo zasebno.</p>
+        <div class="popis-projekata">
+            <article class="kartica-projekta" id="projekt-led-signalizacija">
+                <div class="vrh-projekta"><span class="broj-kartice">01</span><span class="status status-izrada">U izradi</span></div>
+                <h2>LED signalizacija</h2><p>Priprema dijelova za signalnu lampicu i nekoliko probnih spojeva.</p>
+                <div class="projekt-podaci"><span>Početak: <time datetime="2026-11-09">9. 11. 2026.</time></span><span>2 vrste komponenti</span></div>
+                <details class="detalji-projekta"><summary>Plan i dosadašnja potrošnja</summary><div class="omotac-tablice" role="region" aria-label="Komponente za LED signalizaciju" tabindex="0"><table><caption>Potrošeno je uključeno u povijest zaliha</caption><thead><tr><th scope="col">Dio</th><th scope="col" class="broj">Plan</th><th scope="col" class="broj">Potrošeno</th></tr></thead><tbody><tr><th scope="row">Otpornik 220 Ω</th><td class="broj">3</td><td class="broj">3</td></tr><tr><th scope="row">Crvena LED dioda</th><td class="broj">1</td><td class="broj">1</td></tr></tbody></table></div><p class="pomoc-polja">Količine prikazuju utrošene dijelove tijekom rada, a ne nacrt gotovog strujnog kruga.</p></details>
+                <a class="poveznica-kartice" href="zalihe.html#povijest-promjena">Pogledaj evidentiranu potrošnju <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="kartica-projekta" id="projekt-semafor">
+                <div class="vrh-projekta"><span class="broj-kartice">02</span><span class="status status-planirano">Planirano</span></div>
+                <h2>Semafor</h2><p>Planiranje svjetlosnog prikaza s crvenom, žutom i zelenom LED diodom.</p>
+                <div class="projekt-podaci"><span>Početak: nije određen</span><span>4 vrste komponenti</span></div>
+                <details class="detalji-projekta"><summary>Plan potrebnih komponenti</summary><div class="omotac-tablice" role="region" aria-label="Komponente za semafor" tabindex="0"><table><caption>Plan se još ne oduzima od zaliha</caption><thead><tr><th scope="col">Dio</th><th scope="col" class="broj">Plan</th><th scope="col">Zaliha</th></tr></thead><tbody><tr><th scope="row">Otpornik 220 Ω</th><td class="broj">3</td><td>12 kom.</td></tr><tr><th scope="row">Crvena LED dioda</th><td class="broj">1</td><td>4 kom.</td></tr><tr><th scope="row">Žuta LED dioda</th><td class="broj">1</td><td><span class="nedostaje">Treba nabaviti</span></td></tr><tr><th scope="row">Zelena LED dioda</th><td class="broj">1</td><td><span class="nedostaje">Treba nabaviti</span></td></tr></tbody></table></div><p class="pomoc-polja">Popis prati komponente iz evidencije; upravljački sklop nije razrađen.</p></details>
+                <a class="poveznica-kartice" href="zalihe.html#nova-komponenta">Pripremi unos novih dijelova <span aria-hidden="true">→</span></a>
+            </article>
+            <article class="kartica-projekta" id="projekt-testna-plocica">
+                <div class="vrh-projekta"><span class="broj-kartice">03</span><span class="status status-zavrseno">Završeno</span></div>
+                <h2>Testna pločica</h2><p>Vježba prepoznavanja i postavljanja komponente na probnu pločicu.</p>
+                <div class="projekt-podaci"><span>Završeno: <time datetime="2026-11-09">9. 11. 2026.</time></span><span>1 vrsta komponente</span></div>
+                <details class="detalji-projekta"><summary>Iskorištene komponente</summary><div class="omotac-tablice" role="region" aria-label="Komponente za testnu pločicu" tabindex="0"><table><caption>Potrošeno je uključeno u povijest zaliha</caption><thead><tr><th scope="col">Dio</th><th scope="col" class="broj">Plan</th><th scope="col" class="broj">Potrošeno</th></tr></thead><tbody><tr><th scope="row">Kondenzator 100 µF</th><td class="broj">1</td><td class="broj">1</td></tr></tbody></table></div></details>
+                <a class="poveznica-kartice" href="zalihe.html#povijest-promjena">Pogledaj evidentiranu potrošnju <span aria-hidden="true">→</span></a>
+            </article>
+        </div>
+        <section id="novi-projekt" class="unos-panel" aria-labelledby="naslov-novog-projekta">
+            <div class="opis-unosa"><span class="mala-oznaka">NOVA IDEJA</span><h2 id="naslov-novog-projekta">Isplaniraj svoj projekt</h2><p>Za početak definiraj naziv i cilj. Popis komponenti i povezivanje s evidencijom dodajemo u sljedećoj fazi.</p><p class="napomena-forme" id="napomena-projekta">Obrazac je probni. Unos još ne stvara novu projektnu karticu.</p></div>
+            <form class="forma-evidencije" id="forma-projekta" method="get" action="projekti.html#novi-projekt" aria-describedby="napomena-projekta">
+                <input type="hidden" name="obrazac" value="novi-projekt">
+                <p class="polje-puna-sirina"><label for="naziv-projekta">Naziv projekta</label><input type="text" id="naziv-projekta" name="naziv" maxlength="80" required placeholder="Npr. svjetlosni indikator"></p>
+                <p><label for="status-projekta">Status</label><select id="status-projekta" name="status" required><option value="planirano">Planirano</option><option value="izrada">U izradi</option><option value="zavrseno">Završeno</option></select></p>
+                <p><label for="datum-projekta">Planirani početak (nije obavezan)</label><input type="date" id="datum-projekta" name="datum"></p>
+                <p class="polje-puna-sirina"><label for="opis-projekta">Što želiš izraditi?</label><textarea id="opis-projekta" name="opis" rows="3" maxlength="500" required placeholder="Kratko opiši cilj projekta."></textarea></p>
+                <div class="radnje-forme"><span class="uputa-forme">Probni unos se ne sprema.</span><div class="gumbi-forme"><button class="gumb-ocisti" type="reset">Očisti unos</button><button class="gumb-glavni" type="submit">Provjeri unos</button></div></div>
+            </form>
+        </section>
+    </main>
+    <footer id="podnozje">
+        <p>Made with love by Borna Bedić for AI alati u razvoju softvera</p>
+    </footer>
+</body>
+</html>

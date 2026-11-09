@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Evidento — evidencija elektroničkih komponenti, projekti i edukativni alati.">
+    <title>Zalihe | Evidento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="preskoci-navigaciju" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+    <header id="zaglavlje">
+        <div class="sadrzaj-zaglavlja">
+            <a id="poveznica-logo" href="index.html">
+                <img id="logo" src="media/evidento-logo.png" alt="Evidento početna" width="2172" height="724">
+            </a>
+            <nav id="navigacija" aria-label="Glavna navigacija">
+                <a href="index.html">Početna</a>
+                <details class="izbornik-zaliha">
+                    <summary class="aktivna-stavka">Zalihe <span aria-hidden="true">⌄</span></summary>
+                    <div class="padajuci-izbornik">
+                        <div class="opis-izbornika"><strong>Tvoja radionica</strong><p>Što imaš, što dodaješ i što trošiš.</p></div>
+                        <div class="poveznice-izbornika">
+                            <a href="zalihe.html" aria-current="page"><strong>Trenutno stanje</strong><span>Dostupne komponente i količine</span></a>
+                            <a href="zalihe.html#povijest-promjena"><strong>Povijest promjena</strong><span>Dodavanje, potrošnja i namjena</span></a>
+                            <a href="zalihe.html#unos-promjene"><strong>Unos promjene</strong><span>Dodaj komade ili evidentiraj potrošnju</span></a>
+                            <a href="zalihe.html#nova-komponenta"><strong>Nova komponenta</strong><span>Dio koji još nemaš u evidenciji</span></a>
+                        </div>
+                    </div>
+                </details>
+                <a href="projekti.html">Projekti</a>
+                <a href="alati.html">Alati</a>
+                <a href="vodic.html">Vodič</a>
+            </nav>
+        </div>
+    </header>
+    <main id="glavni-sadrzaj" tabindex="-1">
+        <div class="uvod-stranice">
+            <span class="mala-oznaka">EVIDENTO · ZALIHE</span>
+            <h1>Jedna evidencija. Jasan pregled.</h1>
+            <p>Trenutno stanje, dodavanje i potrošnja komponenti na jednom mjestu.</p>
+        </div>
+        <p class="obavijest-prototipa">Ogledna evidencija: brojke su ručno usklađene. Forme provjeravaju unos, ali još ne spremaju podatke.</p>
+        <section id="trenutno-stanje" class="pregled-panel" aria-labelledby="naslov-stanja">
+            <div class="naslov-panela"><div><span class="mala-oznaka">PREGLED RADIONICE</span><h2 id="naslov-stanja">Trenutne zalihe</h2></div><span class="oznaka-pregleda">4 vrste komponenti</span></div>
+            <p class="opis-sekcije">Početno stanje + dodano − potrošeno = trenutno stanje. Sve količine izražene su u komadima.</p>
+            <div class="omotac-tablice" role="region" aria-label="Stanje komponenti" tabindex="0">
+                <table id="tablica-zaliha"><caption>Ogledni obračun zaliha na dan 9. 11. 2026.</caption><thead><tr><th scope="col">Komponenta</th><th scope="col">Vrsta</th><th scope="col" class="broj">Početno</th><th scope="col" class="broj">Dodano</th><th scope="col" class="broj">Potrošeno</th><th scope="col" class="broj">Trenutno</th></tr></thead>
+                <tbody>
+                    <tr id="komponenta-otpornik"><th scope="row">Otpornik 220 Ω</th><td><span class="kategorija kategorija-otpornik">Otpornik</span></td><td class="broj">10</td><td class="broj">5</td><td class="broj">3</td><td class="broj stanje-zalihe">12</td></tr>
+                    <tr id="komponenta-led"><th scope="row">Crvena LED dioda</th><td><span class="kategorija kategorija-led">LED dioda</span></td><td class="broj">5</td><td class="broj">0</td><td class="broj">1</td><td class="broj stanje-zalihe">4</td></tr>
+                    <tr id="komponenta-kondenzator"><th scope="row">Kondenzator 100 µF</th><td><span class="kategorija kategorija-kondenzator">Kondenzator</span></td><td class="broj">8</td><td class="broj">0</td><td class="broj">1</td><td class="broj stanje-zalihe">7</td></tr>
+                    <tr id="komponenta-plava-led"><th scope="row">Plava LED dioda</th><td><span class="kategorija kategorija-led">LED dioda</span></td><td class="broj">222</td><td class="broj">0</td><td class="broj">0</td><td class="broj stanje-zalihe">222</td></tr>
+                </tbody></table>
+            </div>
+        </section>
+        <section id="povijest-promjena" aria-labelledby="naslov-povijesti">
+            <div class="naslov-panela"><div><span class="mala-oznaka">ŠTO SE PROMIJENILO?</span><h2 id="naslov-povijesti">Povijest promjena</h2></div><span class="oznaka-pregleda">Bez početnih stanja</span></div>
+            <p class="opis-sekcije">Svako dodavanje povećava količinu. Svaka potrošnja smanjuje je i bilježi svoju namjenu.</p>
+            <div class="omotac-tablice" role="region" aria-label="Dodavanje i potrošnja komponenti" tabindex="0">
+                <table id="tablica-promjena"><caption>Četiri ogledne promjene uključene u gornji obračun</caption><thead><tr><th scope="col">Datum</th><th scope="col">Komponenta</th><th scope="col">Promjena</th><th scope="col">Projekt / namjena</th></tr></thead><tbody>
+                    <tr><td><time datetime="2026-11-09">9. 11. 2026.</time></td><th scope="row">Kondenzator 100 µF</th><td><span class="promjena-potrosnja">−1 · potrošnja</span></td><td><a href="projekti.html#projekt-testna-plocica">Testna pločica</a></td></tr>
+                    <tr><td><time datetime="2026-11-09">9. 11. 2026.</time></td><th scope="row">Crvena LED dioda</th><td><span class="promjena-potrosnja">−1 · potrošnja</span></td><td><a href="projekti.html#projekt-led-signalizacija">LED signalizacija</a></td></tr>
+                    <tr><td><time datetime="2026-11-09">9. 11. 2026.</time></td><th scope="row">Otpornik 220 Ω</th><td><span class="promjena-potrosnja">−3 · potrošnja</span></td><td><a href="projekti.html#projekt-led-signalizacija">LED signalizacija</a></td></tr>
+                    <tr><td><time datetime="2026-11-09">9. 11. 2026.</time></td><th scope="row">Otpornik 220 Ω</th><td><span class="promjena-dodavanje">+5 · dodavanje</span></td><td>Nabava za radionicu</td></tr>
+                </tbody></table>
+            </div>
+        </section>
+        <section id="unos-promjene" class="unos-panel" aria-labelledby="naslov-promjene">
+            <div class="opis-unosa"><span class="mala-oznaka">POSTOJEĆA KOMPONENTA</span><h2 id="naslov-promjene">Zabilježi promjenu</h2><p>Nabavio si još komada ili si ih iskoristio? Odaberi postojeći dio i vrstu promjene.</p><p class="napomena-forme" id="napomena-promjene">Potrošnja ne smije biti veća od zalihe. Usporedbu sa stanjem i spremanje omogućit ćemo JavaScriptom.</p></div>
+            <form id="forma-promjene" class="forma-evidencije" method="get" action="zalihe.html#unos-promjene" aria-describedby="napomena-promjene">
+                <input type="hidden" name="obrazac" value="promjena-zalihe">
+                <p class="polje-puna-sirina"><label for="promjena-komponenta">Komponenta</label><select id="promjena-komponenta" name="komponenta" required><option value="">Odaberi komponentu</option><option value="otpornik-220">Otpornik 220 Ω</option><option value="led-crvena">Crvena LED dioda</option><option value="kondenzator-100">Kondenzator 100 µF</option><option value="led-plava">Plava LED dioda</option></select></p>
+                <p><label for="vrsta-promjene">Vrsta promjene</label><select id="vrsta-promjene" name="promjena" required><option value="">Odaberi promjenu</option><option value="dodavanje">Dodavanje na zalihu</option><option value="potrosnja">Potrošnja</option></select></p>
+                <p><label for="kolicina-promjene">Količina</label><input type="number" id="kolicina-promjene" name="kolicina" min="1" max="1000" step="1" required aria-describedby="pomoc-kolicine"><small class="pomoc-polja" id="pomoc-kolicine">Pozitivan cijeli broj od 1 do 1000.</small></p>
+                <p><label for="datum-promjene">Datum</label><input type="date" id="datum-promjene" name="datum" required></p>
+                <p><label for="projekt-promjene">Projekt (ako se odnosi na njega)</label><select id="projekt-promjene" name="projekt"><option value="">Opći rad / bez projekta</option><option value="led-signalizacija">LED signalizacija</option><option value="semafor">Semafor</option><option value="testna-plocica">Testna pločica</option></select></p>
+                <p class="polje-puna-sirina"><label for="razlog-promjene">Razlog ili namjena</label><textarea id="razlog-promjene" name="razlog" rows="2" maxlength="300" placeholder="Npr. nabava novih dijelova ili ispitivanje LED signalizacije" required></textarea></p>
+                <div class="radnje-forme"><span class="uputa-forme">Sva polja osim projekta su obavezna. Probni unos se ne sprema.</span><div class="gumbi-forme"><button class="gumb-ocisti" type="reset">Očisti unos</button><button class="gumb-glavni" type="submit">Provjeri unos</button></div></div>
+            </form>
+        </section>
+        <section id="nova-komponenta" aria-labelledby="naslov-nove-komponente">
+            <div class="naslov-panela"><div><span class="mala-oznaka">NOVI DIO U EVIDENCIJI</span><h2 id="naslov-nove-komponente">Nova komponenta</h2></div></div>
+            <p class="opis-sekcije">Ovaj obrazac koristi se za novi naziv komponente. Za dodatne komade već postojećeg dijela koristi unos promjene.</p>
+            <form id="forma-nove-komponente" class="forma-evidencije" method="get" action="zalihe.html#nova-komponenta" aria-describedby="napomena-nove-komponente">
+                <input type="hidden" name="obrazac" value="nova-komponenta">
+                <p class="polje-puna-sirina"><label for="naziv-komponente">Naziv komponente</label><input type="text" id="naziv-komponente" name="naziv" maxlength="100" placeholder="Npr. žuta LED dioda" required></p>
+                <p><label for="kategorija-komponente">Vrsta komponente</label><select id="kategorija-komponente" name="kategorija" required><option value="">Odaberi vrstu</option><option value="otpornik">Otpornik</option><option value="kondenzator">Kondenzator</option><option value="led">LED dioda</option><option value="ostalo">Ostalo</option></select></p>
+                <p><label for="pocetna-kolicina">Početna količina</label><input type="number" id="pocetna-kolicina" name="pocetna-kolicina" min="0" max="1000" step="1" required><small class="pomoc-polja">Od 0 do 1000 komada. Nula znači da dio tek planiraš nabaviti.</small></p>
+                <div class="radnje-forme"><span class="uputa-forme" id="napomena-nove-komponente">Sva polja su obavezna. Probni unos se ne sprema.</span><div class="gumbi-forme"><button class="gumb-ocisti" type="reset">Očisti unos</button><button class="gumb-glavni" type="submit">Provjeri unos</button></div></div>
+            </form>
+        </section>
+    </main>
+    <footer id="podnozje">
+        <p>Made with love by Borna Bedić for AI alati u razvoju softvera</p>
+    </footer>
+</body>
+</html>

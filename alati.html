@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Evidento — evidencija elektroničkih komponenti, projekti i edukativni alati.">
+    <title>Alati | Evidento</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="otpornici-stilovi.css">
+</head>
+<body>
+    <a class="preskoci-navigaciju" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+    <header id="zaglavlje">
+        <div class="sadrzaj-zaglavlja">
+            <a id="poveznica-logo" href="index.html">
+                <img id="logo" src="media/evidento-logo.png" alt="Evidento početna" width="2172" height="724">
+            </a>
+            <nav id="navigacija" aria-label="Glavna navigacija">
+                <a href="index.html">Početna</a>
+                <details class="izbornik-zaliha">
+                    <summary>Zalihe <span aria-hidden="true">⌄</span></summary>
+                    <div class="padajuci-izbornik">
+                        <div class="opis-izbornika"><strong>Tvoja radionica</strong><p>Što imaš, što dodaješ i što trošiš.</p></div>
+                        <div class="poveznice-izbornika">
+                            <a href="zalihe.html"><strong>Trenutno stanje</strong><span>Dostupne komponente i količine</span></a>
+                            <a href="zalihe.html#povijest-promjena"><strong>Povijest promjena</strong><span>Dodavanje, potrošnja i namjena</span></a>
+                            <a href="zalihe.html#unos-promjene"><strong>Unos promjene</strong><span>Dodaj komade ili evidentiraj potrošnju</span></a>
+                            <a href="zalihe.html#nova-komponenta"><strong>Nova komponenta</strong><span>Dio koji još nemaš u evidenciji</span></a>
+                        </div>
+                    </div>
+                </details>
+                <a href="projekti.html">Projekti</a>
+                <a href="alati.html" aria-current="page">Alati</a>
+                <a href="vodic.html">Vodič</a>
+            </nav>
+        </div>
+    </header>
+    <main id="glavni-sadrzaj" tabindex="-1">
+        <div class="uvod-stranice">
+            <span class="mala-oznaka">EVIDENTO · ALATI</span>
+            <h1>Mala pomoć za velike ideje.</h1>
+            <p>Praktični edukativni alati koji ti pomažu upoznati komponente prije rada na projektu.</p>
+        </div>
+        <section class="predstavljeni-alat" aria-labelledby="naslov-alata">
+            <div class="ilustracija-alata" aria-hidden="true">
+                <span class="natpis-alata">ČETIRI PRSTENA. JEDNA VRIJEDNOST.</span>
+                <div class="model-otpornika"><div class="zica-otpornika zica-lijevo"></div><div class="tijelo-otpornika"><span class="prsten-otpornika prvi-prsten"></span><span class="prsten-otpornika drugi-prsten"></span><span class="prsten-otpornika treci-prsten"></span><span class="prsten-otpornika cetvrti-prsten"></span></div><div class="zica-otpornika zica-desno"></div></div>
+                <span class="vrijednost-alata">220 Ω <small>±5%</small></span>
+            </div>
+            <div class="opis-alata"><span class="mala-oznaka">ISTRAŽIVAČ KOMPONENTI</span><h2 id="naslov-alata">Čitač oznaka otpornika</h2><p>Usporedi boje prstenova s pet pripremljenih primjera. Promijeni pogled i poveži boje s vrijednošću otpora.</p><ul class="popis-mogucnosti"><li>Pet primjera od 220 Ω do 10 kΩ</li><li>Tri pogleda na CSS prikaz</li><li>Objašnjenje množitelja i tolerancije</li></ul><a class="gumb-glavni" href="otpornici.html">Pokreni istraživač <span aria-hidden="true">→</span></a><p class="pomoc-polja">Gotovi primjeri rade bez JavaScripta. Slobodan izbor boja i izračun planirani su kasnije.</p></div>
+        </section>
+        <section class="most-do-vodica"><div><h2>Želiš prvo upoznati komponente?</h2><p>U vodiču saznaj što rade otpornik, kondenzator i LED dioda.</p></div><a class="gumb-ocisti" href="vodic.html">Otvori vodič <span aria-hidden="true">→</span></a></section>
+    </main>
+    <footer id="podnozje">
+        <p>Made with love by Borna Bedić for AI alati u razvoju softvera</p>
+    </footer>
+</body>
+</html>

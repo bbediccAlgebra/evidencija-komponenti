@@ -3,146 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Evidento — evidencija elektroničkih komponenti, projekti i edukativni alati.">
     <title>Komponente | Evidento</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="stranica-evidencije">
-<a class="preskoci-navigaciju" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+<body>
+    <a class="preskoci-navigaciju" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
     <header id="zaglavlje">
-    <a id="poveznica-logo" href="index.html">
-        <img id="logo" src="media/evidento-logo.png" alt="Evidento početna" width="2172" height="724">
-    </a>
-
-    <h1 id="glavni-naslov">Komponente</h1>
-
-    <nav id="navigacija" aria-label="Glavna navigacija">
-            <a href="index.html">Početna</a>
-            <a href="potrosnja.html">Potrošnja</a>
-            <a href="otpornici.html">Oznake otpornika</a>
-            <a href="vodic.html">Vodič</a>
-        </nav>
-</header>
-
+        <div class="sadrzaj-zaglavlja">
+            <a id="poveznica-logo" href="index.html">
+                <img id="logo" src="media/evidento-logo.png" alt="Evidento početna" width="2172" height="724">
+            </a>
+            <nav id="navigacija" aria-label="Glavna navigacija">
+                <a href="index.html">Početna</a>
+                <details class="izbornik-zaliha">
+                    <summary class="aktivna-stavka">Zalihe <span aria-hidden="true">⌄</span></summary>
+                    <div class="padajuci-izbornik">
+                        <div class="opis-izbornika"><strong>Tvoja radionica</strong><p>Što imaš, što dodaješ i što trošiš.</p></div>
+                        <div class="poveznice-izbornika">
+                            <a href="zalihe.html" aria-current="page"><strong>Trenutno stanje</strong><span>Dostupne komponente i količine</span></a>
+                            <a href="zalihe.html#povijest-promjena"><strong>Povijest promjena</strong><span>Dodavanje, potrošnja i namjena</span></a>
+                            <a href="zalihe.html#unos-promjene"><strong>Unos promjene</strong><span>Dodaj komade ili evidentiraj potrošnju</span></a>
+                            <a href="zalihe.html#nova-komponenta"><strong>Nova komponenta</strong><span>Dio koji još nemaš u evidenciji</span></a>
+                        </div>
+                    </div>
+                </details>
+                <a href="projekti.html">Projekti</a>
+                <a href="alati.html">Alati</a>
+                <a href="vodic.html">Vodič</a>
+            </nav>
+        </div>
+    </header>
     <main id="glavni-sadrzaj" tabindex="-1">
         <div class="uvod-stranice">
-            <span class="mala-oznaka">EVIDENTO · KOMPONENTE</span>
-            <h2>Sve komponente na jednom mjestu</h2>
-            <p>Pregled dostupnih dijelova tvoje radionice. Novi unos pripremi ispod popisa.</p>
+            <span class="mala-oznaka">EVIDENTO · ZALIHE</span>
+            <h1>Komponente su sada dio Zaliha.</h1>
+            <p>Trenutno stanje, dodavanje i potrošnja objedinjeni su u jednoj evidenciji.</p>
         </div>
-
-        <div class="evidencija">
-        <section id="popis-komponenti" class="pregled-panel">
-            <div class="naslov-panela">
-                <h3>Dostupne komponente</h3>
-                <span class="oznaka-pregleda">Ogledni podaci</span>
-            </div>
-            <p>
-                U tablici su prikazane komponente i njihove dostupne količine.
-            </p>
-
-            <div class="omotac-tablice" role="region" aria-label="Tablica dostupnih komponenti" tabindex="0">
-            <table id="tablica-komponenti">
-                <caption>Dostupne komponente i broj komada</caption>
-                <thead>
-                    <tr>
-                        <th scope="col">Naziv</th>
-                        <th scope="col">Vrsta</th>
-                        <th scope="col">Količina</th>
-                    </tr>
-                </thead>
-                <tbody id="podaci-komponenti">
-                    <tr id="komponenta-otpornik">
-                        <td>Otpornik 220 Ω</td>
-                        <td><span class="kategorija kategorija-otpornik">Otpornik</span></td>
-                        <td>10</td>
-                    </tr>
-                    <tr id="komponenta-led">
-                        <td>Crvena LED dioda</td>
-                        <td><span class="kategorija kategorija-led">LED dioda</span></td>
-                        <td>5</td>
-                    </tr>
-                    <tr id="komponenta-kondenzator">
-                        <td>Kondenzator 100 µF</td>
-                        <td><span class="kategorija kategorija-kondenzator">Kondenzator</span></td>
-                        <td>8</td>
-                    </tr>
-                    <tr>
-                        <td>Plava LED dioda</td>
-                        <td><span class="kategorija kategorija-led">LED dioda</span></td>
-                        <td>222</td>
-                    </tr>
-                </tbody>
-            </table>
-            </div>
-        </section>
-
-        <section id="dodavanje-komponente" class="unos-panel">
-            <div class="opis-unosa">
-            <span class="mala-oznaka">NOVI UNOS</span>
-            <h3>Dodaj komponentu</h3>
-            <p>Upiši naziv, odaberi kategoriju i navedi broj komada.</p>
-
-            <p id="napomena-forme">
-                Probni obrazac: provjera unosa radi, spremanje podataka još nije omogućeno.
-            </p>
-
-            </div>
-
-            <form id="forma-komponente" class="forma-unosa forma-evidencije" method="get" aria-describedby="napomena-forme">
-                <p class="polje-puna-sirina">
-                    <label for="naziv">Naziv komponente:</label>
-                    <input
-                        type="text"
-                        id="naziv"
-                        name="naziv"
-                        placeholder="Npr. otpornik 220 Ω"
-                        maxlength="100"
-                        required
-                    >
-                </p>
-
-                <p>
-                    <label for="vrsta">Vrsta komponente:</label>
-                    <select id="vrsta" name="vrsta" required>
-                        <option value="">Odaberi vrstu</option>
-                        <option value="otpornik">Otpornik</option>
-                        <option value="kondenzator">Kondenzator</option>
-                        <option value="led">LED dioda</option>
-                    </select>
-                </p>
-
-                <p>
-                    <label for="kolicina">Količina:</label>
-                    <input
-                        type="number"
-                        id="kolicina" aria-describedby="pomoc-kolicina"
-                        name="kolicina"
-                        placeholder="Broj komada"
-                        min="1"
-                        max="1000"
-                        step="1"
-                        required
-                    >
-                    <small id="pomoc-kolicina" class="pomoc-polja">Cijeli broj od 1 do 1000 komada.</small>
-                </p>
-
-                <div class="radnje-forme">
-                <span class="uputa-forme">Sva polja su obavezna.</span>
-                <div class="gumbi-forme">
-                <button class="gumb-ocisti" type="reset">Očisti unos</button>
-                <button id="gumb-dodaj" class="gumb-glavni" type="submit">
-                    Dodaj komponentu
-                </button>
-                </div>
-                </div>
-            </form>
-        </section>
-        </div>
+        <section class="stara-stranica"><a class="gumb-glavni" href="zalihe.html">Otvori zalihe <span aria-hidden="true">→</span></a></section>
     </main>
-
-<footer id="podnozje">
-    <p>Made with love by Borna Bedić for AI alati u razvoju softvera</p>
-</footer>
+    <footer id="podnozje">
+        <p>Made with love by Borna Bedić for AI alati u razvoju softvera</p>
+    </footer>
 </body>
 </html>

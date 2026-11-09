@@ -1,48 +1,53 @@
 # Evidento
 
-Evidento je web aplikacija za evidenciju elektroničkih komponenti i praćenje njihove potrošnje. Projekt izrađujem za kolegij **AI alati u razvoju softvera**.
+Evidento je studentski projekt za evidenciju elektroničkih komponenti, planiranje projekata i upoznavanje osnovnih dijelova elektronike.
 
-## Stranice
+**Autor:** Borna Bedić, grupa 2OP1
 
-- **Početna** — opis aplikacije.
-- **Komponente** — pregled dostupnih komponenti i forma za dodavanje.
-- **Potrošnja** — pregled potrošnje i forma za unos potrošenih komponenti.
-- **Vodič** — kratka objašnjenja komponenti i česta pitanja.
-- **Oznake otpornika** — pet gotovih primjera s promjenom pogleda, objašnjenjem prstenova i tablicom boja.
+**Kolegij:** AI alati u razvoju softvera
 
-## Korištene tehnologije
+## Organizacija aplikacije
 
-- HTML za strukturu stranica, tablice i forme.
-- CSS za izgled, boje, razmake i prilagodbu različitim veličinama ekrana.
-- CSS Grid za raspored zaglavlja i kartica.
-- Flexbox za navigaciju, kartice početne stranice i raspored elemenata forme.
-- CSS tranzicije za postupnu promjenu boja, položaja i sjena.
-- Git i GitHub za praćenje verzija projekta.
+- **Početna** — pregled mogućnosti i objašnjenje tijeka rada.
+- **Zalihe** — trenutno stanje, povijest dodavanja i potrošnje te obrasci za promjenu i novu komponentu.
+- **Projekti** — ogledni projekti sa statusima, planom dijelova i dosadašnjom potrošnjom te obrazac za novi projekt.
+- **Alati** — pristup istraživaču oznaka otpornika.
+- **Vodič** — objašnjenja otpornika, kondenzatora i LED diode te česta pitanja.
+
+## Logika evidencije
+
+**Trenutno stanje = početno stanje + dodano − potrošeno.**
+
+Nova komponenta predstavlja novi dio u evidenciji. Dodatne komade postojećeg dijela evidentiramo kao dodavanje. Potrošnju povezujemo s projektom ili općom namjenom.
+
+Planiranje komponenti za projekt ne mijenja zalihe. Količina se smanjuje tek evidentiranjem stvarne potrošnje. Ogledni podaci o zalihama i potrošnji u projektima međusobno su usklađeni.
+
+## Trenutna faza
+
+Projekt je HTML/CSS prototip. Tablice, projektne kartice i rezultati istraživača otpornika unaprijed su napisani u HTML-u.
+
+Forme provjeravaju obavezna polja i dopuštene raspone. Slanje koristi metodu GET: vrijednosti se pojavljuju u adresi stranice, ali se ne spremaju niti ažuriraju prikaz. Gumbi za čišćenje vraćaju početne vrijednosti polja.
+
+Izbornik Zalihe, projektni detalji i česta pitanja rade pomoću oznaka details i summary. Odabir primjera otpornika i pogleda koristi radio polja i CSS selektore :checked i :has(). Prikaz otpornika CSS je ilustracija s dojmom dubine, a ne pravi 3D model.
+
+## Tehnologije i raspored datoteka
+
+- HTML za stranice, navigaciju, tablice i forme.
+- CSS Flexbox i Grid za raspored i prilagodbu ekranima.
+- CSS tranzicije za promjene boje, položaja i sjena.
+- `style.css` sadrži zajedničke stilove.
+- `otpornici-stilovi.css` sadrži stilove istraživača i koristi se samo na stranicama Alati i Oznake otpornika.
+- `media/` sadrži logo i ilustracije.
+- Git i GitHub koriste se za verzioniranje. Veća reorganizacija razvija se u grani `feature/zalihe-projekti-alati`.
+
+Stare datoteke `komponente.html` i `potrosnja.html` zadržane su kao poveznice prema novoj stranici Zalihe. Glavna navigacija ih više ne koristi.
 
 ## Pokretanje
 
-Preuzmi projekt i otvori datoteku `index.html` u pregledniku. Projekt se može pokrenuti i pomoću proširenja Live Server u Visual Studio Codeu.
+Otvori `index.html` u pregledniku ili koristi Live Server u Visual Studio Codeu. Internet je potreban za učitavanje fonta Inter; bez njega koristi se Arial.
 
-Za učitavanje fonta Inter potrebna je internetska veza. Bez nje koristi se zamjenski font Arial.
+## Sljedeća faza
 
-## Trenutno stanje
+JavaScriptom treba dodati spremanje podataka, stvaranje i brisanje stavki, provjeru potrošnje prema zalihi, povezivanje projekata, filtriranje i učitavanje JSON podataka. Istraživač otpornika kasnije može dobiti slobodan odabir prstenova i automatski izračun.
 
-Izrađene su pet povezanih stranica s prilagodbom za manje ekrane. Forme provjeravaju obavezna polja i dopušteni raspon količine.
-
-Podaci u tablicama zasad su upisani ručno. Spremanje unosa, promjena količina i ostale dinamičke mogućnosti bit će dodani tijekom rada s JavaScriptom.
-
-## Dorade rasporeda i tranzicija
-
-- Početna stranica ima uvod i tri kartice s poveznicama.
-- Na stranicama Komponente i Potrošnja tablica je iznad obrasca za unos.
-- Polja obrasca koriste Flexbox i prelaze u jedan stupac na mobitelu.
-- Obje forme imaju HTML gumb za čišćenje unosa.
-- Poveznice iz vodiča otvaraju odgovarajući redak tablice, istaknut CSS selektorom `:target`.
-
-## Istraživač otpornika
-
-Odabir primjera i kuta gledanja radi radio poljima i CSS selektorima `:checked` i `:has()`. Prikaz je CSS ilustracija s dojmom dubine, a rezultati su unaprijed napisani za pet primjera. Nema JavaScripta ni automatskog izračuna. Slobodan odabir svih prstenova i izračun vrijednosti planirani su za JavaScript fazu. Izvor za kodove boja naveden je na stranici.
-
-## Autor
-
-Borna Bedić
+Za završetak projekta potrebno je postupno pokriti i preostale kriterije projektnog zadatka. Trenutni prototip još ne predstavlja završenu aplikaciju.

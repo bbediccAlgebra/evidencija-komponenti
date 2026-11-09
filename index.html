@@ -3,79 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Evidento — evidencija elektroničkih komponenti, projekti i edukativni alati.">
     <title>Početna | Evidento</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body id="pocetna">
-<a class="preskoci-navigaciju" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
+<body>
+    <a class="preskoci-navigaciju" href="#glavni-sadrzaj">Preskoči na sadržaj</a>
     <header id="zaglavlje">
-    <a id="poveznica-logo" href="index.html">
-        <img id="logo" src="media/evidento-logo.png" alt="Evidento početna" width="2172" height="724">
-    </a>
-
-    <h1 id="glavni-naslov">Početna</h1>
-
-    <nav id="navigacija" aria-label="Glavna navigacija">
-            <a href="komponente.html">Komponente</a>
-            <a href="potrosnja.html">Potrošnja</a>
-            <a href="otpornici.html">Oznake otpornika</a>
-            <a href="vodic.html">Vodič</a>
-        </nav>
-</header>
-
+        <div class="sadrzaj-zaglavlja">
+            <a id="poveznica-logo" href="index.html">
+                <img id="logo" src="media/evidento-logo.png" alt="Evidento početna" width="2172" height="724">
+            </a>
+            <nav id="navigacija" aria-label="Glavna navigacija">
+                <a href="index.html" aria-current="page">Početna</a>
+                <details class="izbornik-zaliha">
+                    <summary>Zalihe <span aria-hidden="true">⌄</span></summary>
+                    <div class="padajuci-izbornik">
+                        <div class="opis-izbornika"><strong>Tvoja radionica</strong><p>Što imaš, što dodaješ i što trošiš.</p></div>
+                        <div class="poveznice-izbornika">
+                            <a href="zalihe.html"><strong>Trenutno stanje</strong><span>Dostupne komponente i količine</span></a>
+                            <a href="zalihe.html#povijest-promjena"><strong>Povijest promjena</strong><span>Dodavanje, potrošnja i namjena</span></a>
+                            <a href="zalihe.html#unos-promjene"><strong>Unos promjene</strong><span>Dodaj komade ili evidentiraj potrošnju</span></a>
+                            <a href="zalihe.html#nova-komponenta"><strong>Nova komponenta</strong><span>Dio koji još nemaš u evidenciji</span></a>
+                        </div>
+                    </div>
+                </details>
+                <a href="projekti.html">Projekti</a>
+                <a href="alati.html">Alati</a>
+                <a href="vodic.html">Vodič</a>
+            </nav>
+        </div>
+    </header>
     <main id="glavni-sadrzaj" tabindex="-1">
         <section id="uvod-pocetne" aria-labelledby="naslov-uvoda">
-            <span class="mala-oznaka">EVIDENTO · ELEKTRONIČKE KOMPONENTE</span>
-            <h2 id="naslov-uvoda">Mali dijelovi.<br>Bolji pregled.</h2>
-            <p class="uvodni-tekst">
-                Pregledaj komponente svoje radionice, pronađi podatke o potrošnji
-                i nauči čemu služi svaki dio. Sve na jednom mjestu.
-            </p>
-
-            <p class="napomena-pocetne">Studentski projekt u razvoju. Trenutno su prikazani ogledni podaci.</p>
-        </section>
-
-        <section id="koraci" aria-labelledby="naslov-koraka">
-            <h2 id="naslov-koraka">Odaberi što želiš otvoriti</h2>
-            <p>Pregled komponenti, potrošnja, vodič ili oznake otpornika — odaberi gdje želiš nastaviti.</p>
-
-            <div class="precaci">
-                <article class="kartica-korak">
-                    <span class="broj-koraka" aria-hidden="true">01</span>
-                    <h3>Pronađi svoj dio</h3>
-                    <p>U tablici komponenti pogledaj naziv, kategoriju i dostupnu količinu.
-                       Ispod tablice nalazi se forma za unos nove komponente.</p>
-                    <a class="pocetna-gumb" href="komponente.html">Otvori komponente <span aria-hidden="true">→</span></a>
-                </article>
-
-                <article class="kartica-korak">
-                    <span class="broj-koraka" aria-hidden="true">02</span>
-                    <h3>Pregledaj potrošnju</h3>
-                    <p>Provjeri primjere utrošenih dijelova, datume i njihovu namjenu.
-                       U formi možeš isprobati unos podataka o potrošnji.</p>
-                    <a class="pocetna-gumb" href="potrosnja.html">Otvori potrošnju <span aria-hidden="true">→</span></a>
-                </article>
-
-                <article class="kartica-korak">
-                    <span class="broj-koraka" aria-hidden="true">03</span>
-                    <h3>Upoznaj komponente</h3>
-                    <p>Nisi siguran čemu neki dio služi? Vodič objašnjava otpornike,
-                       kondenzatore i LED diode te odgovara na česta pitanja.</p>
-                    <a class="pocetna-gumb" href="vodic.html">Istraži vodič <span aria-hidden="true">→</span></a>
-                </article>
-                <article class="kartica-korak">
-                    <span class="broj-koraka" aria-hidden="true">04</span>
-                    <h3>Pročitaj oznake</h3>
-                    <p>Istraži obojene prstenove otpornika. Odaberi primjer i promijeni kut gledanja.</p>
-                    <a class="pocetna-gumb" href="otpornici.html">Istraži otpornike <span aria-hidden="true">→</span></a>
-                </article>
+            <img class="slika-uvoda" src="media/evidento-komponente-panorama.png" alt="Ilustracija otpornika, kondenzatora, LED dioda i tranzistora sa zelenim osvjetljenjem." width="1536" height="1024" fetchpriority="high">
+            <div class="tekst-uvoda">
+                <span class="mala-oznaka">TVOJA MALA ELEKTRONIČKA RADIONICA</span>
+                <h1 id="naslov-uvoda">Od prvog dijela.<br>Do gotovog projekta.</h1>
+                <p class="uvodni-tekst">Organiziraj komponente, isplaniraj što želiš izraditi i prati za što koristiš svoje dijelove.</p>
+                <p class="napomena-pocetne">HTML i CSS prototip · prikazani su ogledni podaci</p>
             </div>
         </section>
+        <section class="pocetni-pregled" aria-labelledby="naslov-pregleda">
+            <div class="naslov-sekcije"><span class="mala-oznaka">SVE IMA SVOJE MJESTO</span><h2 id="naslov-pregleda">Što želiš napraviti?</h2><p>Od pregleda zaliha do planiranja sljedeće ideje.</p></div>
+            <div class="kartice-pocetne">
+                <article class="kartica-pocetne"><span class="broj-kartice">01</span><h3>Provjeri zalihe</h3><p>Pogledaj što imaš. Dodavanje i potrošnja pripadaju istoj evidenciji.</p><a class="gumb-glavni" href="zalihe.html">Otvori zalihe <span aria-hidden="true">→</span></a></article>
+                <article class="kartica-pocetne"><span class="broj-kartice">02</span><h3>Isplaniraj projekt</h3><p>Odredi cilj, složi popis potrebnih dijelova i prati status izrade.</p><a class="gumb-glavni" href="projekti.html">Pregledaj projekte <span aria-hidden="true">→</span></a></article>
+                <article class="kartica-pocetne"><span class="broj-kartice">03</span><h3>Istraži alate</h3><p>Isprobaj čitač oznaka otpornika i nauči što znače obojeni prstenovi.</p><a class="gumb-glavni" href="alati.html">Otvori alate <span aria-hidden="true">→</span></a></article>
+            </div>
+            <p class="poveznica-pomoci">Tek upoznaješ elektroniku? <a href="vodic.html">Kreni od vodiča kroz komponente.</a></p>
+        </section>
+        <section class="objasnjenje-logike" aria-labelledby="naslov-logike">
+            <div><span class="mala-oznaka">JEDNOSTAVNA LOGIKA</span><h2 id="naslov-logike">Prvo planiraš.<br>Trošiš kad stvarno koristiš.</h2><p>Popis dijelova u projektu služi planiranju. Stanje zaliha mijenja se tek kada evidentiraš dodavanje ili potrošnju.</p></div>
+            <ol class="tijek-rada"><li><strong>Pregledaj stanje</strong><span>Provjeri raspoložive komponente.</span></li><li><strong>Odaberi projekt</strong><span>Zapiši što trebaš za izradu.</span></li><li><strong>Zabilježi promjenu</strong><span>Poveži stvarnu potrošnju s projektom.</span></li></ol>
+        </section>
     </main>
-
-<footer id="podnozje">
-    <p>Made with love by Borna Bedić for AI alati u razvoju softvera</p>
-</footer>
+    <footer id="podnozje">
+        <p>Made with love by Borna Bedić for AI alati u razvoju softvera</p>
+    </footer>
 </body>
 </html>
