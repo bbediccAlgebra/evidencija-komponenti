@@ -1,0 +1,205 @@
+.povratak-na-projekte {
+    font-size: 14px;
+}
+
+.uvod-radnog-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background: linear-gradient(120deg, #14271f, var(--pozadina-kartice) 65%);
+}
+
+.uvod-radnog-lista h1 {
+    margin-bottom: 12px;
+}
+
+.uputa-za-ispis {
+    max-width: 260px;
+    padding: 16px;
+    border: 1px solid var(--boja-ruba);
+    border-radius: 12px;
+    background: var(--pozadina-stranice);
+}
+
+.uputa-za-ispis p {
+    margin: 6px 0 0;
+    font-size: 13px;
+}
+
+.uputa-za-ispis kbd {
+    padding: 2px 6px;
+    border: 1px solid var(--boja-ruba);
+    border-radius: 4px;
+}
+
+.raspored-pripreme {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.raspored-pripreme > section {
+    flex-grow: 1;
+    flex-basis: 380px;
+    min-width: 0;
+}
+
+.panel-radnog-lista .omotac-tablice {
+    margin-top: 16px;
+}
+
+.panel-radnog-lista table {
+    min-width: 430px;
+}
+
+.lista-provjere {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-provjere li + li {
+    border-top: 1px solid var(--boja-ruba);
+}
+
+.lista-provjere label {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.lista-provjere input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin: 2px 0 0;
+    padding: 0;
+    accent-color: var(--naglasena-boja);
+}
+
+.lista-provjere input:checked + span {
+    color: var(--naglasena-boja);
+}
+
+.skica-radnog-lista {
+    margin: 0;
+}
+
+.skica-radnog-lista iframe,
+.skica-radnog-lista img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 600 / 180;
+    border: 0;
+    border-radius: 10px;
+}
+
+.skica-radnog-lista figcaption {
+    margin-top: 12px;
+    color: var(--boja-sporednog-teksta);
+    font-size: 14px;
+}
+
+.poveznica-na-potrosnju {
+    text-align: center;
+    font-size: 14px;
+}
+
+.samo-ispis {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .uputa-za-ispis {
+        max-width: none;
+        width: 100%;
+    }
+}
+
+/* Za papir prikazujemo samo sadržaj radnog lista. */
+@media print {
+    @page {
+        margin: 14mm;
+    }
+
+    .stranica-radnog-lista {
+        display: block;
+        min-height: 0;
+        color-scheme: light;
+        color: #192820;
+        background: white;
+        font-size: 11pt;
+    }
+
+    .stranica-radnog-lista #zaglavlje,
+    .stranica-radnog-lista #podnozje,
+    .stranica-radnog-lista .preskoci-navigaciju,
+    .stranica-radnog-lista .samo-zaslon {
+        display: none;
+    }
+
+    .stranica-radnog-lista .samo-ispis {
+        display: block;
+    }
+
+    .stranica-radnog-lista #glavni-sadrzaj {
+        width: 100%;
+        margin: 0;
+        animation: none;
+    }
+
+    .stranica-radnog-lista section {
+        padding: 12px;
+        margin-bottom: 12px;
+        background: white;
+        border: 1px solid #b9c7bf;
+        break-inside: avoid;
+    }
+
+    .stranica-radnog-lista h1 {
+        font-size: 22pt;
+    }
+
+    .stranica-radnog-lista h2 {
+        font-size: 13pt;
+    }
+
+    .stranica-radnog-lista p,
+    .stranica-radnog-lista caption,
+    .stranica-radnog-lista th,
+    .stranica-radnog-lista label,
+    .stranica-radnog-lista figcaption,
+    .stranica-radnog-lista .mala-oznaka,
+    .lista-provjere input:checked + span {
+        color: #192820;
+    }
+
+    .stranica-radnog-lista .omotac-tablice {
+        overflow: visible;
+        border-color: #b9c7bf;
+    }
+
+    .stranica-radnog-lista table {
+        min-width: 0;
+    }
+
+    .stranica-radnog-lista th,
+    .stranica-radnog-lista td {
+        padding: 7px;
+        background: white;
+        border-color: #b9c7bf;
+    }
+
+    .raspored-pripreme {
+        display: block;
+    }
+
+    .lista-provjere input[type="checkbox"] {
+        accent-color: #185943;
+    }
+}

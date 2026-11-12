@@ -31,6 +31,7 @@
     font-size: 24px;
 }
 
+/* Prikaz otpornika */
 .scena-otpornika {
     position: relative;
     display: flex;
@@ -148,6 +149,7 @@
 }
 
 /* has provjerava koji je radio odabran unutar forme */
+/* Boje prstenova prema odabranom primjeru */
 #istrazivac-otpornika:has(#primjer-330:checked) {
     --boja-prvog-prstena: #ee802c;
     --boja-drugog-prstena: #ee802c;
@@ -179,6 +181,7 @@
     transform: rotateX(38deg) rotateZ(12deg) scale(0.95);
 }
 
+/* Prikaz rezultata prema odabranom primjeru */
 .rezultati-otpornika {
     margin-top: 24px;
     text-align: center;
@@ -255,6 +258,7 @@
     gap: 10px;
 }
 
+/* Odabir primjera i kuta gledanja */
 .opcija-otpornika {
     display: flex;
     align-items: center;
@@ -266,7 +270,7 @@
     border-radius: 10px;
     cursor: pointer;
     transition-property: background-color, border-color;
-    transition-duration: 0.2s, 0.2s;
+    transition-duration: 0.2s;
 }
 
 .opcija-otpornika input[type="radio"] {

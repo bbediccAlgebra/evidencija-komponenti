@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 180" role="img" aria-labelledby="naslov opis">
+    <title id="naslov">Skica LED signalizacije</title>
+    <desc id="opis">Od plusa preko otpornika i LED diode do minusa.</desc>
+    <rect width="600" height="180" rx="16" fill="#eff7f4"/>
+    <path d="M70 79H530" fill="none" stroke="#32735e" stroke-width="4"/>
+    <circle cx="70" cy="79" r="24" fill="#e1f4ea" stroke="#32735e" stroke-width="2"/>
+    <circle cx="530" cy="79" r="24" fill="#e1f4ea" stroke="#32735e" stroke-width="2"/>
+    <rect x="150" y="57" width="116" height="44" rx="6" fill="#fff" stroke="#32735e" stroke-width="2"/>
+    <path d="M345 57v44l43-22z" fill="#ffe1df" stroke="#9e332e" stroke-width="3"/>
+    <path d="M388 55v48" stroke="#9e332e" stroke-width="3"/>
+    <path d="M373 50l14-15m3 17l14-15m-25-2h8v8m9-6h8v8" fill="none" stroke="#9e332e" stroke-width="2"/>
+    <g fill="#15382c" font-family="Arial, sans-serif" font-size="22" font-weight="bold" text-anchor="middle">
+        <text x="70" y="87">+</text>
+        <text x="530" y="87">−</text>
+        <text x="208" y="87">220 Ω</text>
+        <text x="208" y="139">Otpornik</text>
+        <text x="367" y="139">LED dioda</text>
+    </g>
+</svg>
